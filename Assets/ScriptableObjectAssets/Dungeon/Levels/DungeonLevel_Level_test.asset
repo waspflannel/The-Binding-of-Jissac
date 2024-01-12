@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38feeb3000eecf4db5bafd627bccff6, type: 3}
+  m_Name: DungeonLevel_Level_test
+  m_EditorClassIdentifier: 
+  levelName: The Hall Of Heroes
+  roomTemplateList:
+  - {fileID: 11400000, guid: b05ef321707b62c45a80922110507daa, type: 2}
+  - {fileID: 11400000, guid: 48f89ab49752eaf4185f6d229a8507b0, type: 2}
+  - {fileID: 11400000, guid: f54444696904e6e43a259d74037b2c05, type: 2}
+  - {fileID: 11400000, guid: a513c365c6072fa4c9068779c5d2173e, type: 2}
+  roomNodeGraphList:
+  - {fileID: 11400000, guid: a12c3e337dd6fa94fad5765f5ffceb99, type: 2}
