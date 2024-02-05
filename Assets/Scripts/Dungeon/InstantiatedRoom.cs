@@ -18,7 +18,7 @@ public class InstantiatedRoom : MonoBehaviour
     [HideInInspector] public Tilemap collisionTilemap;
     [HideInInspector] public Tilemap minimapTilemap;
     [HideInInspector] public Bounds roomColliderBounds;
-
+    [HideInInspector] public int[,] aStarMovementPenalty;
     
 
     private BoxCollider2D boxCollider2D;
@@ -42,8 +42,10 @@ public class InstantiatedRoom : MonoBehaviour
     {
         PopulateTilemapMemberVariables(roomGameobject);
         BlockOffUnusedDoorways();
+        AddObstacles();
         AddDoorsToRooms();
         DisableCollisionTilemapRenderer();
+        
     }
 
     //this method loops through our tilemaps and populates the grid and tilemap member variables
@@ -172,6 +174,38 @@ public class InstantiatedRoom : MonoBehaviour
             }
         }
     }
+    private void AddObstacles()
+    {
+        aStarMovementPenalty = new int[room.templateUpperBounds.x - room.templateLowerBounds.x + 1, room.templateUpperBounds.y - room.templateLowerBounds.y + 1];
+        for (int x = 0; x < (room.templateUpperBounds.x - room.templateLowerBounds.x + 1); x++)
+        {
+            for(int y=0; y< (room.templateUpperBounds.y - room.templateLowerBounds.y + 1); y++)
+            {
+                //set default movement penalty for grid squares
+                aStarMovementPenalty[x, y] = Settings.defaultAStarMovementPenalty;
+                //add obstacles for collision tiles so enemies dont walk through it
+                TileBase tile = collisionTilemap.GetTile(new Vector3Int(x + room.templateLowerBounds.x, y + room.templateLowerBounds.y, 0));
+                //once we get the tile , loop through all the tiles we dont want enemies to walk through
+                foreach (TileBase collisionTile in GameResources.Instance.enemyUnwalkableCollisionTileArray)
+                {
+                    //if the tile we got from the tilemap matches that tile
+                    if(tile == collisionTile)
+                    {
+                        //set penalty to 0
+                        aStarMovementPenalty[x, y] = 0;
+                        break;
+                    }
+                    
+                }
+                if(tile == GameResources.Instance.preferredEnemyPathTile)
+                {
+                    aStarMovementPenalty[x, y] = Settings.preferredPathAStarMovementPenalty;
+                }
+
+            }
+        }
+    }
+
 
     //this adds door prefabs to the doors
     private void AddDoorsToRooms()

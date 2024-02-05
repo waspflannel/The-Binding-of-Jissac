@@ -55,6 +55,10 @@ public static class Settings
     //else the weapon aim angle will be used(calculated from the weapon shoot position)
     public const float useAimAngleDistance = 3.5f;
 
+   
+    public const int defaultAStarMovementPenalty = 40;
+    public const int preferredPathAStarMovementPenalty = 1;
+
 
     public const float uiAmmoIconSpacing = 4f;
 }

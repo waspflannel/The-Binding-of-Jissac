@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class GameResources : MonoBehaviour
 {
@@ -48,6 +49,10 @@ public class GameResources : MonoBehaviour
     public Material litMaterial;
     public Shader variableLitShader;
 
+    //this is an array because theres two tiles for it the full and the half
+    public TileBase[] enemyUnwalkableCollisionTileArray;
+    public TileBase preferredEnemyPathTile;
+
     public GameObject ammoIconPrefab;
 
 
@@ -60,6 +65,8 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValues(this, nameof(litMaterial), litMaterial);
         HelperUtilities.ValidateCheckNullValues(this, nameof(variableLitShader), variableLitShader);
         HelperUtilities.ValidateCheckNullValues(this, nameof(ammoIconPrefab), ammoIconPrefab);
+        HelperUtilities.ValidateCheckNullValues(this, nameof(preferredEnemyPathTile), preferredEnemyPathTile);
+        HelperUtilities.ValidateCheckEnumerateValues(this, nameof(enemyUnwalkableCollisionTileArray), enemyUnwalkableCollisionTileArray);
     }
 
 #endif
