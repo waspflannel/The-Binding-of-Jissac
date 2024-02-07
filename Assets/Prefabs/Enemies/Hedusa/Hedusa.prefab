@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8109334965181120198, guid: 2aaeda27d00ee2e4799c6ef37dd0d37f, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: ade9d2e653549064486fc7e83da7e286, type: 2}
+    - target: {fileID: -2235099178401112554, guid: 2aaeda27d00ee2e4799c6ef37dd0d37f, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 47ed87a4eda559d46b433fc911098f56, type: 2}
     - target: {fileID: 2827527992151303340, guid: 2aaeda27d00ee2e4799c6ef37dd0d37f, type: 3}
       propertyPath: m_Name
       value: Hedusa

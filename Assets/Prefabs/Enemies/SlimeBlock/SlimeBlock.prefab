@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8109334965181120198, guid: 2aaeda27d00ee2e4799c6ef37dd0d37f, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d1e4198fe3b7c448807ee24319e8f62, type: 2}
+    - target: {fileID: -2235099178401112554, guid: 2aaeda27d00ee2e4799c6ef37dd0d37f, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 16e404cd9877f75419cf8c0722d6bdac, type: 2}
     - target: {fileID: 2827527992151303340, guid: 2aaeda27d00ee2e4799c6ef37dd0d37f, type: 3}
       propertyPath: m_Name
       value: SlimeBlock

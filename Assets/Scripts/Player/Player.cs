@@ -128,4 +128,9 @@ public class Player : MonoBehaviour
 
         return weapon;
     }
+
+    public Vector3 GetPlayerPosition()
+    {
+        return transform.position;
+    }
 }
