@@ -131,5 +131,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>//this ensures onl
         HelperUtilities.ValidateCheckEnumerateValues(this, nameof(dungeonLevelList), dungeonLevelList);
     }
 
+    public DungeonLevelSO GetCurrentDungeonLevel()
+    {
+        return dungeonLevelList[currentDungeonListIndex];
+    }
+
     #endregion Validation
 }

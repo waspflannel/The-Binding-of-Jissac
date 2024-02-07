@@ -72,6 +72,14 @@ public class RoomTemplateSO : ScriptableObject
 
     public Vector2Int[] spawnPositionArray;
 
+    #region Header Enemy Details
+    [Space(10)]
+    [Header("Enemy Details")]
+    //populate the list with all enemies that can be spawned in this room by dungeon level.
+
+    #endregion Header Enemy Details
+    public List<SpawnableObjectsByLevel<EnemyDetailsSO>> enemiesByLevelList;
+
     /// Returns the list of Entrances for the room template
     public List<Doorway> GetDoorwayList()
     {
