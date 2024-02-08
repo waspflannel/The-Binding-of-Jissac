@@ -11,4 +11,6 @@ example map generated from node graph
 
 
 example AStar pathing
+
+
 ![exampleAStar](https://github.com/waspflannel/The-Binding-of-Jissac/assets/63312552/d7aeb172-586d-422c-bb03-b0c23f3de2ae)
