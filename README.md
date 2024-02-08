@@ -1,4 +1,5 @@
-A rogue-like gunner game similar Created in Unity
+A rogue-like gunner game Created in Unity, contains procedural dungeon generation, multiple playable characters, loads of different weapons,
+AI controlled enemies and much more
 
 check out assets > scripts for the code
 
